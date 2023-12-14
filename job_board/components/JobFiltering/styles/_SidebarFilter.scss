@@ -1,0 +1,125 @@
+:root {
+    --nav-color: #F6EDE5;
+    --moto-color: #7E519F;
+    --homebg-color: #DCE9E2;
+    --streamsbg-color: #F7FDF6;
+    --reviewbg-color: #8C6B9C;
+    --footerLogoBg1-color: #D3F0D6;
+    --footerLogoBg-color: #a9e7b3;
+    --reportBtn-color: #E53E4B;
+    --defaultFont-color: #8b193f;
+    --menu-color: #221F20;
+    --lavender-color: lavender;
+}
+.noscroll{
+    overflow: hidden;
+}
+
+.sidebar {
+    padding: 2px;
+    display: flex;
+    //border: solid violet;
+    position: fixed;
+    left: 0;
+    top: 0;
+    margin-top: 57px;
+    width: 275px;
+    height: 100vh;
+    background-color: #f1f1f1;
+    z-index: 100;
+    .top{
+        display: flex;
+        flex-direction: row;
+        justify-content: first baseline;
+        height: 50px;
+        margin-bottom: 8px;
+        h3{
+            color: #000;
+            font-family: Inter;
+            font-size: 15px;
+            font-weight: 300;
+            display: flex;
+            align-items: center;
+        }
+        button{
+            //width: 120px;
+            border: 0.2px solid #ffffff;
+            border-radius: 50px;
+            background: rgb(61, 59, 170);
+            margin: 7px;
+            margin-top: 7px;
+            margin-left: 60px;
+            cursor: pointer;
+            text-align: center;
+            box-shadow: 0 5px 5px #6d6a6a;
+            &:active{
+                scale: -0.7;
+                transition: 1.5s ease-in-out;
+            }
+        }
+    }
+    .filterFields{
+        width: 275px;
+
+        background: white;
+        h3{
+            color: #000;
+            font-family: Inter;
+            font-size: 16px;
+            font-weight: 300;
+            display: flex;
+            align-items: center;
+            margin: 3px;
+        }
+        overflow-y: scroll;
+        .exp, .level, .salary, .location {
+            width:90%;
+            margin-left: 10px;
+            height: 185px;
+            // background: var(--lavender-color);
+            background-color:rgb(216, 219, 249);
+            margin-bottom: 10px;
+            h3{
+                padding-top: 5px;
+            }
+            .radio-container{
+                display: flex;
+            }
+            .left-column,
+            .right-column {
+            flex: 1;
+            }
+
+            .right-column {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            }
+
+            .radio-label {
+            display: block;
+            margin-bottom: 8px;
+            margin: 5px;
+            }
+
+        }
+    }
+}
+.sidebar .filterFields {
+    /* scroll */
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    &::-webkit-scrollbar-track {
+      background-color: var(--homebg-color);
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--moto-color);
+      border-radius: 4px;
+    }
+  }
+  
+      
+    

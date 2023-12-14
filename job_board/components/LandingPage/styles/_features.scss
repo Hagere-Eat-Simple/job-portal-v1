@@ -1,0 +1,98 @@
+:root {
+    --nav-color: #F6EDE5;
+    --moto-color: #7E519F;
+    --homebg-color: #DCE9E2;
+    --streamsbg-color: #F7FDF6;
+    --reviewbg-color: #8C6B9C;
+    --footerLogoBg1-color: #D3F0D6;
+    --footerLogoBg-color: #a9e7b3;
+    --reportBtn-color: #E53E4B;
+    --defaultFont-color: #8b193f;
+    --menu-color: #221F20;
+}
+
+.features{
+    display: inline-flex;
+    height: 100vh;
+    padding: 66px;
+    gap: 3%;
+    box-shadow: 0 5px 15px rgba(145, 144, 144, 0.7);
+    .first{
+        box-shadow: 0 5px 15px rgba(145, 144, 144, 0.7);
+        background-color:midnightblue;
+        width: 70%;
+        color:  #97d0a0;
+        p{
+            padding-top: 7px;
+            margin: 5px;
+            text-align: justify;
+            
+        }
+    }
+    .second{
+        box-shadow: 0 5px 15px rgba(145, 144, 144, 0.7);
+        background-color: var(--homebg-color);
+        width: 30%;
+        display: flex;
+        p{
+            margin: 5px;
+            padding-top: 70px;
+            text-align: center;
+        }
+    }
+    h1{
+        margin-top: 8px;
+        text-align: center;
+        font-weight: 400;
+        font-size: 20px;
+        color:  #aaeab4;
+
+    }
+    i{
+        padding: 10px;
+        cursor: pointer;
+        transition: transform 0.2s ease-in-out;
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .features{   
+        display:flex;
+        padding: 30px;
+        flex-direction: column;
+        justify-content: center;
+        .first{
+            height: 250px;
+            overflow-y: auto;
+            width: 100%;
+            /* Styling the scrollbar */
+            scrollbar-width: thin;
+            scrollbar-color: var(--defaultFont-color) var(--footerLogoBg1-color);
+
+            &::-webkit-scrollbar {
+            width: 8px;
+            }
+
+            &::-webkit-scrollbar-track {
+            background: lavender;
+            }
+
+            &::-webkit-scrollbar-thumb {
+            background-color: var(--defaultFont-color);
+            border-radius: 14px;
+            }
+
+            &::-webkit-scrollbar-thumb:hover {
+            background-color: var(--menu-color);
+            }  
+        }
+        .second{
+            height: 250px;
+            overflow-y: hidden;
+            width: 100%;
+        }              
+    }
+}

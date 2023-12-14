@@ -1,0 +1,228 @@
+:root {
+    --nav-color: #F6EDE5;
+    --moto-color: #172cb9;
+    --homebg-color: #DCE9E2;
+    --streamsbg-color: #F7FDF6;
+    --reviewbg-color: #8C6B9C;
+    --footerLogoBg1-color: #D3F0D6;
+    --footerLogoBg-color: #a9e7b3;
+    --reportBtn-color: #E53E4B;
+    --defaultFont-color: #8b193f;
+    --menu-color: #221F20;
+    --lavender-color: lavender;
+}
+
+.Slider {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .Slider__items {
+    display: flex;
+    transition: transform 0.5s;
+  }
+  
+  .Slider__item {
+    flex: 0 0 100%;
+  }
+
+  .active .Slider__item {
+    display: flex;
+  }
+
+  
+  .Slider__arrows {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .Slider__arrow {
+    font-size: 24px;
+    border: none;
+    background-color: var(--lavender-color);
+    color: var(--defaultFont-color);
+    cursor: pointer;
+    margin: 0 10px;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    font-size: 28px;
+    font-weight: 530;
+    border-radius: 50%;
+    &:hover{
+      background: var(--lavender-color);
+      color: var(--menu-color);     
+      border-radius: 50%;
+    }
+    &:active{
+      border: 1px solid var(--moto-color);
+      border-radius: 50%;
+    }
+  }
+  
+  .Slider__arrow--left {
+    left: 30px;
+  }
+  
+  .Slider__arrow--right {
+    right: 45px;
+  }
+  .Testimonials {
+    display:flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--lavender-color) ;
+    
+        .Quote {
+        background-color:  #191970;
+        border-radius: 8px;
+        width: 50%;
+        height: 50%;
+        //margin: 13%;
+        margin-left: 25%;
+        margin-top: 10%;
+        padding: 30px;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(77, 5, 116, 0.8);
+        color: var(--nav-color);
+            .title {
+            margin-top:15px;
+            font-size: 2rem;
+            margin-bottom: 10px;
+
+            }
+            .Role {
+                font-size: 14px;
+                margin-right: 5px;
+                margin-top: 3px;
+                position: relative;
+                top: 200px;
+                display: flex;
+                justify-content: right;
+                width: 98%;
+            }
+            
+            .Name {
+                font-size: 16px;
+                font-weight: bold;
+                margin-top: 1px;
+                position: relative;
+                top: 159px;
+                display: flex;
+                justify-content: right;
+                width: 98%; 
+            }
+            .Testimonial {
+                margin-top: 20px;
+                font-size: 19px;
+                text-align: justify;
+                padding: 7px;
+                width: 98%;
+                position: relative;
+                top: -58px;
+                left: 4px;
+                height: 240px;
+                overflow: hidden;
+                }
+            .Photo {
+            height: 120px;
+            width: 120px;
+            transform: translateY(-356%);
+            translate: 449%;
+            object-fit: cover;
+            border-radius: 50%;
+            border: solid 3px var(--nav-color);
+            &:hover{
+              scale: 1.1;
+              transition: ease-in-out 1s;
+            }
+             }
+            .fa-quote-left {
+            margin: -24px;
+            display: flex;
+            justify-self: first baseline;
+            font-size: 35px;  
+            color: var(--nav-color); 
+        }
+    }
+}
+  
+  @media screen and (max-width: 790px) {
+    .Testimonials{
+        .Quote {
+            width: 55%;
+            height: 51%;
+            margin: 20%;
+            .title {
+                margin: -7px;
+                font-size: 1.4rem;
+                margin-bottom: 0px;
+                padding-right: 20px;
+                }
+            .fa-quote-left {
+                margin: -7px;
+                padding: 1px;
+                position: relative;
+                left:-12px;
+                top:-12px;
+                font-size: 27px;
+
+            }
+            .Photo{
+                //display: none;
+                transform: translateY(-356%);
+                translate: 200%;
+            }
+            .Role {
+                font-size: 14px;
+                margin-right: 5px;
+                margin-top: 3px;
+                position: relative;
+                top: 240px;
+                display: flex;
+                justify-content: right;
+                width: 100%;
+                }
+            
+                .Name {
+                font-size:16px;
+                font-weight: bold;
+                margin-top: 1px;
+                position: relative;
+                top: 195px;
+                display: flex;
+                justify-content: right;
+                width: 100%;
+                }
+            .Testimonial {
+                font-size: 16.3px;
+                margin-top: 20px;
+                position: relative;
+                top: -60px;
+                left: -9px;
+                width: 107%;
+                height: 200px;
+                padding: 5px;
+            }
+        }
+    }  
+}
+  
+@media screen and (max-width: 600px) {
+  .Testimonials{
+    background-color: rgb(247, 247, 247) ;
+    display: flex;
+    .Quote{
+
+      height: 460px;
+      .Photo{
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,120 @@
+:root {
+    --nav-color: #F6EDE5;
+    --moto-color: #7E519F;
+    --homebg-color: #DCE9E2;
+    --streamsbg-color: #F7FDF6;
+    --reviewbg-color: #8C6B9C;
+    --footerLogoBg1-color: #D3F0D6;
+    --footerLogoBg-color: #a9e7b3;
+    --reportBtn-color: #E53E4B;
+    --defaultFont-color: #231e6b;
+    --menu-color: #221F20;
+    --nav-font-size: 18px;
+}
+nav {
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 60px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease-in-out;
+}
+.Nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    li {
+        list-style: none;
+        padding: 0 20px;
+        position: relative;
+        a {
+            text-decoration: none; 
+            font-size:  var(--nav-font-size);
+            font-weight: 600;
+            color: var(--reviewbg-color);
+            transition: 0.3s ease-in-out;
+        }
+        a:hover {
+            color: var(--footerLogoBg-color);
+        }
+        a:hover::after, a.active::after{
+            content: "";
+            width: 50%;
+            height: 2px;
+            background:var(--footerLogoBg-color);
+            position: absolute;
+            bottom: -4px;
+            left: 20px;
+        }
+        #regBtn {
+            background-color: var(--nav-color);
+            color: var(--menu-color);
+            border: none;
+            // border-radius: 13%;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            &:hover{
+                background-color: var(--footerLogoBg1-color);
+                box-shadow: 0 5px 15px rgba(145, 144, 144, 0.7);
+            }
+        }
+    }
+    icon {
+        display: none;
+    }
+  }
+//responsive
+#mobile {
+    display: none;
+    i{
+        color:var(--moto-color);
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 790px) {
+    .Nav-list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 57px;
+        right: -300px;
+        width: 300px;
+        height: 100vh;
+        background: rgb(35, 30, 107);
+        box-shadow: 0 40px 60px rgba(165, 177, 119, 0.7);
+        padding: 40px 0 0 10px;
+        transition: 0.2s ease-in-out;
+        li {
+            margin-bottom: 25px;
+            a {
+                color: var(--nav-color);
+            }
+        }
+        li, icon {
+            color: var(--footerLogoBg-color);
+            display: inline;
+            padding: 5px;
+            cursor: pointer;
+            &:hover{
+                color:var(--nav-color);
+            }
+        }
+    }
+    .Nav-list.active {
+        right: 0px;
+    }
+    #mobile {
+        display: block;
+        i {
+            font-size: 24px;
+            cursor: pointer;
+        }
+    }
+}

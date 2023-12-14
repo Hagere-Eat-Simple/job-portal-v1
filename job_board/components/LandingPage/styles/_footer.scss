@@ -1,0 +1,158 @@
+:root {
+    --nav-color: #F6EDE5;
+    --moto-color: #7E519F;
+    --homebg-color: #DCE9E2;
+    --streamsbg-color: #F7FDF6;
+    --reviewbg-color: #8C6B9C;
+    --footerLogoBg1-color: #D3F0D6;
+    --footerLogoBg-color: #a9e7b3;
+    --reportBtn-color: #E53E4B;
+    --defaultFont-color: #8b193f;
+    --menu-color: #221F20;
+    --footer-color: #50237D;
+}
+// footer.scss
+.footer {
+  background-color: #231E6B;
+  padding: 40px 0;
+
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  color: var(--nav-color);
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.col-md-4 {
+  width: calc(20% - 20px);
+  margin-bottom: 40px;
+  .logo{
+    width:100%;
+    height: 55px;
+  }
+  .svg{
+    width: 193px;
+    border: solid chartreuse;
+  }
+  .brief{
+    text-align: justify;
+    align-items: center;
+    font-weight: 100;
+  }
+  h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 10px;
+      a {
+        color: var(--nav-color);
+        text-decoration: none;
+      }
+      a:hover {
+        color: var(--footerLogoBg-color);
+      }
+      a:hover::after, a.active::after{
+          content: "";
+          width: 10%;
+          height: 2px;
+          background:var(--footerLogoBg-color);
+          position: absolute;
+          bottom: -4px;
+          left: 20px;
+      }
+      &:hover{
+        transform: translateX(15px) ;
+        transition: 0.3s ease-in-out;
+      }
+    }
+  }
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+
+  li {
+    margin-right: 10px;
+
+    i {
+      font-size: 18px;
+      margin-right: 5px;
+    }
+
+    a {
+      text-decoration: none;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+button {
+  background-color: var(--reportBtn-color);
+  color: var(--nav-color);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-image: linear-gradient(45deg, var(--reportBtn-color) 0%, var(--defaultFont-color) 100%);
+  }
+}
+
+.copyAndLogo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--nav-color);
+  ul{
+    list-style: none;  
+  }
+  .line {
+    flex-grow: 1;
+    height: 1.5px;
+    background-color: #333;
+    margin: 0 10px;
+    background-color: var(--nav-color);
+  }
+  .copyRight{
+    margin-left: 10px;
+    padding-right: 10px;
+  }
+  .copyRight,
+  #secondLogo {
+    flex-grow: 0;
+    font-size: 17px;
+  }
+  #secondLogo {
+    margin-left: 10px;
+    margin-bottom: 18px;
+  }
+}
+
+
+/* Responsive Styles */
+@media screen and (max-width: 789px) {
+  .col-md-4 {
+    width: calc(38% - 40px);
+  }
+}

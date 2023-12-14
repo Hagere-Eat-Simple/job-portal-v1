@@ -1,0 +1,21 @@
+:root {
+    --nav-color: #F6EDE5;
+    --moto-color: #7E519F;
+    --homebg-color: #DCE9E2;
+    --streamsbg-color: #F7FDF6;
+    --reviewbg-color: #8C6B9C;
+    --footerLogoBg1-color: #D3F0D6;
+    --footerLogoBg-color: #a9e7b3;
+    --reportBtn-color: #E53E4B;
+    --defaultFont-color: #8b193f;
+    --menu-color: #221F20;
+    --lavender-color: lavender;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import 'Search';
+@import 'SidebarFilter';

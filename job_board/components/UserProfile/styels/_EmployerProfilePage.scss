@@ -1,0 +1,101 @@
+:root {
+  --btn-color:  #007bff;
+  --errorBtn-color: #d9534f;
+  --activeBtn-color: #4caf50;
+  --streamsbg-color: #F7FDF6;
+  --logoutBtn-color: #00337e;
+  --reportBtn-color: #E53E4B;
+  --footerLogoBg1-color: #D3F0D6;
+  --footerLogoBg-color: #a9e7b3;
+  --h3-color: #808080;
+  ---color: #8b193f;
+  --menu-color: #221F20;
+  --footer-color: #50237D;
+  --lavender-color: lavender;
+}
+
+.EmployerProfileSec {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  height: 130vh;
+  width: 100%;
+}
+
+.ProfilePageEmployer {
+  width: 100%;
+  padding: 10px;
+  margin-top: 70px;
+  height: 120vh;
+  h3{
+    text-align: center;
+  }
+  form{
+    height: 100%;
+    width:90%;
+  }
+  
+  .GridLayout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .grid-item {
+      display: flex;
+      flex-direction: column;
+      
+      &:first-child {
+        grid-column: span 1; 
+        img{
+          width: 210px;
+        }
+      }
+      label {
+        width: 60%;
+        margin: 3px;
+      }
+    
+      input {
+        margin: 2px;
+        width: 83%;
+        padding: 8px;
+        border: 2px solid var(--footerLogoBg-color);
+        border-radius: 4px;
+        &:hover{
+          border: 1px solid #7b148f;
+        }
+      }
+    }
+  }
+  
+  .uploadLogo {
+    cursor: pointer;
+  }
+  
+  .newLogo {
+    max-width: 100%;
+    max-height: 200px;
+    margin: 10px 0;
+  }
+  // .uploadLogoText{
+  //   display: none;
+  // }
+  .changeLogoText {
+    cursor: pointer;
+    font-weight: 600;
+    color: #00337e;
+    text-align: center;
+  }
+
+.SaveChanges{
+  padding: 10px 20px;
+  background-color: var(--btn-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  &:hover{
+      background: var(--activeBtn-color);
+      color: black;
+    }
+}    
+
+}

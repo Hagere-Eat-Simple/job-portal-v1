@@ -1,0 +1,79 @@
+:root {
+    --nav-color: #F6EDE5;
+    --moto-color: #7E519F;
+    --homebg-color: #DCE9E2;
+    --streamsbg-color: #F7FDF6;
+    --reviewbg-color: #8C6B9C;
+    --footerLogoBg1-color: #D3F0D6;
+    --footerLogoBg-color: #a9e7b3;
+    --reportBtn-color: #E53E4B;
+    --defaultFont-color: #8b193f;
+    --menu-color: #221F20;
+}
+.streams {
+    background-color: #f2f2f2;
+    padding: 20px;
+    div{
+        text-align: center;
+        margin-bottom: 20px;
+        font-weight: 500;
+        font-size: 25px;
+    }
+    .grida {
+        display: grid;
+        grid-template-columns: repeat(3, 2fr);
+        gap: 20px;
+        
+    }
+    .grida-item {
+        background-color: #ffffff;
+        border: 1px solid #e6e6e6;
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.2s ease-in-out;
+        // &:hover{
+        //     transform: scale(1.2);
+        // }
+  
+        h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 14px;
+            color: #666666;
+        }
+    }
+    .grida-item {
+        /* Other styles */
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
+      
+      .grida-item:hover {
+        animation: hoverEffect 1s ease infinite;
+      }
+      
+      @keyframes hoverEffect {
+        0% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        50% {
+          transform: scale(1.2) rotate(0deg);
+          opacity: 0.7;
+        }
+        100% {
+          transform: scale(1) rotate(0deg);
+          opacity: 1;
+        }
+      }
+}
+
+@media screen and (max-width: 789px) {
+    .streams{
+    .grida {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
+ }
+}

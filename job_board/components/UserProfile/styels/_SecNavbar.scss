@@ -1,0 +1,51 @@
+:root {
+    --nav-color: #F6EDE5;
+    --moto-color: #7E519F;
+    --homebg-color: #DCE9E2;
+    --streamsbg-color: #F7FDF6;
+    --reviewbg-color: #8C6B9C;
+    --footerLogoBg1-color: #D3F0D6;
+    --footerLogoBg-color: #a9e7b3;
+    --reportBtn-color: #E53E4B;
+    --defaultFont-color: #221F20;
+    --menu-color: #221F20;
+  }
+  
+.nav2{
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    align-self: first baseline;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 60px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease-in-out;
+    li {
+      list-style: none;
+      padding: 0 20px;
+      position: relative;
+      cursor: pointer;
+      //color: ;
+      a {
+          text-decoration: none; 
+          font-size: 1.3rem;
+          font-weight: 600;
+          color: var(--reviewbg-color);
+          transition: 0.3s ease-in-out;
+      }
+      a:hover {
+          color: var(--footerLogoBg-color);
+      }
+      a:hover::after, a.active::after{
+          content: "";
+          width: 50%;
+          height: 2px;
+          background:var(--footerLogoBg-color);
+          position: absolute;
+          bottom: -4px;
+          left: 20px;
+      }
+    }
+}
