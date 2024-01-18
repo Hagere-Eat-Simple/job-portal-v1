@@ -14,7 +14,7 @@ router.post("/users/me/avatar",auth,upload.single('avatar') , async(req,res)=>{
         req.user.avatar = req.file.buffer
         await req.user.save()
         res.status(200).send()
-}, (error , req , res , next)=>{
+}, (error , req , res , next)=>{ge
     res.status(500).send({error:error.message})
 })
 router.delete("/users/me/avatar" , auth , async (req , res)=>{
@@ -129,14 +129,14 @@ router.delete('/user/:id', async (req,res)=>{
         res.status(500).send(e.message) 
     }
 })  
-router.post('/applicants',auth , async (req,res)=>{
-    try{
-        const user = await User.find({_id : {$in : req.body.applicants}})
-        res.status(200).send(user)
-    }catch(e){
-        res.status(500).send(e.message) 
-    }
-})
+// router.post('/applicants',auth , async (req,res)=>{
+//     try{
+//         const user = await User.find({_id : {$in : req.body.applicants}})
+//         res.status(200).send(user)
+//     }catch(e){
+//         res.status(500).send(e.message) 
+//     }
+// })
 router.get('/Users', async (req, res )=>{
     try{
         const user = await User.find({role: "user" , isactive:"active"})
@@ -154,14 +154,14 @@ router.get('/company',adminauth , async (req, res )=>{
         res.status(400).send(e.message)
     }
 })
-// router.get('/company/banned' , async (req, res )=>{
-//     try{
-//         const company = await User.find({role: "company" , isactive:"banned"}) 
-//         res.send({company})
-//     }catch(e){
-//         res.status(400).send(e.message)
-//     }
-// })
+router.get('/company/banned' , async (req, res )=>{
+    try{
+        const company = await User.find({role: "company" , isactive:"banned"}) 
+        res.send({company})
+    }catch(e){
+        res.status(400).send(e.message)
+    }
+})
 router.patch('/user/ban/:id', adminauth , async (req,res)=>{
     try{
         const user = await User.findByIdAndUpdate({_id : req.params.id} , {isactive : "banned" })
@@ -215,16 +215,16 @@ router.get("/users/:id/cv" , async (req ,res)=>{
         res.status(400).send()
     }
 })
-router.post("/sendemail" , async(req , res) =>{
-    const {email} = req.body 
-    const data = { 
-       ...req.body.data ,
-       email
-    } 
-    console.log(email , data)
-    await sendEmail(data)
-    res.status(200).send("success")
-} )
+// router.post("/sendemail" , async(req , res) =>{
+//     const {email} = req.body 
+//     const data = { 
+//        ...req.body.data ,
+//        email
+//     } 
+//     console.log(email , data)
+//     await sendEmail(data)
+//     res.status(200).send("success")
+// } )
 // update 
  
 module.exports = router
