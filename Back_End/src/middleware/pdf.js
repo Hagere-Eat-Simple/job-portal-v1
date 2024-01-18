@@ -2,7 +2,7 @@ const multer = require('multer')
 
 const pdf = multer({
     limits:{
-        fileSize : 1000000
+        fileSize : 2000000
       },
     fileFilter:function(req , file , callback){
         if(!file.originalname.match(/\.(pdf)$/)){
