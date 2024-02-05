@@ -28,7 +28,7 @@ The Job Portal is a web application built using Next.js and Python. It facilitat
 
 1. **Clone the Repository:**
     ```bash
-    git clone https://github.com/yourusername/job-portal.git
+    git clone https://github.com/Hagere-Eat-Simple/job-portal-v1.git
     cd job-portal
     ```
 
