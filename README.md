@@ -4,6 +4,19 @@
 
 The Job Portal is a web application built using Next.js and Python. It facilitates the interaction between job seekers and employers by providing a platform for job listing, application submission, and communication. This documentation outlines the installation process and describes the functional requirements of the project.
 
+## Project Team
+
+### Group Members
+
+| Member Names           | Id          |
+|------------------------|-------------|
+| Yabsera Haile          | ETS0660/12  |
+| Yayehyrad Sisay        | ETS0668/12  |
+| Emran Hayredin         | ETS0986/12  |
+| Yared Babesha          | ETS0667/12  |
+| Vanilla Getachew       | ETS0652/12  |
+| Bereket Sintayehu      | ETS0967/12  |
+
 ## Installation Guide
 
 ### Prerequisites
