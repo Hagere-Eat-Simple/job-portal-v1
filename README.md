@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The Job Portal is a web application built using Next.js and Python. It facilitates the interaction between job seekers and employers by providing a platform for job listing, application submission, and communication. This documentation outlines the installation process and describes the functional requirements of the project.
+The Job Portal is a web application built using Next.js and  Python. It facilitates the interaction between job seekers and employers by providing a platform for job listing,  application submission, and communication. This documentation  outlines the installation process and describes the functional requirements of the project.
 
 ## Installation Guide
 
