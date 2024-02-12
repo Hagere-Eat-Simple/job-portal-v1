@@ -14,8 +14,9 @@ The Job Portal is a web application built using Next.js and Python. It facilitat
 | Yayehyrad Sisay        | ETS0668/12  |
 | Emran Hayredin         | ETS0986/12  |
 | Yared Babesha          | ETS0667/12  |
-| Vanilla Getachew       | ETS0652/12  |
 | Bereket Sintayehu      | ETS0967/12  |
+| Vanilla Getachew       | ETS0652/12  |
+| Yohannes Kassa         | ETS1063/12  |
 
 ## Installation Guide
 
